@@ -59,6 +59,9 @@ section[id], article[id] { scroll-margin-top: 100px; }
 .section-index { color: var(--muted); margin-bottom: .65rem; }
 h2 { margin: 0; font-size: 1.25rem; font-weight: 550; line-height: 1.4; letter-spacing: 0; }
 .papers h2 { font-size: 1.8rem; }
+.research-intro { padding: .3rem 0 1.6rem; }
+.research-intro h3 { margin: 0; font-size: clamp(1.5rem, 3vw, 2.15rem); font-weight: 500; line-height: 1.5; letter-spacing: -.035em; }
+.research-intro p { margin: .7rem 0 0; color: var(--muted); font-size: .85rem; }
 .section:not(.papers) > .section-bar .section-index { display: none; }
 .section-description { margin: 0; color: var(--muted); font-size: .85rem; text-align: right; }
 .paper { display: flex; flex-direction: column; padding: 2rem; border: 1px solid var(--line); background: var(--surface); border-radius: 5px; }
@@ -109,7 +112,6 @@ h2 { margin: 0; font-size: 1.25rem; font-weight: 550; line-height: 1.4; letter-s
 .news-list time { color: var(--signal); font: .75rem/1.9 ui-monospace, monospace; }
 .news-category { color: var(--muted); font-size: .72rem; }
 .news-list p { margin: 0; font-size: .9rem; }.news-list small { display: block; color: var(--muted); font: .65rem/2 ui-monospace, monospace; }
-.honors-note { color: var(--muted); font-size: .78rem; margin-top: 1.5rem; }
 .about-layout { display: grid; grid-template-columns: 1.5fr .7fr; gap: clamp(3rem, 8vw, 8rem); }
 .about-prose p { margin: 0 0 1.3rem; color: var(--muted); font-size: .93rem; line-height: 2; }
 .about-prose .about-lead { color: var(--ink); font-size: 1.3rem; margin-bottom: 1.5rem; }
