@@ -17,7 +17,7 @@
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
   <header class="site-header">
-    <a class="wordmark" href="#top" aria-label="黄腾，返回首页"><span class="wordmark-mark">TH</span><span>黄腾 / Teng Huang</span></a>
+    <a class="wordmark" href="#top" aria-label="黄腾，返回首页">黄腾 / Teng Huang</a>
     <nav class="desktop-nav" aria-label="主导航">
       <a href="#research">论文</a><a href="#work">项目与探索</a><a href="#news">动态</a><a href="#about">关于</a>
     </nav>
@@ -30,22 +30,15 @@
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow">XI’AN JIAOTONG UNIVERSITY · PHD STUDENT</p>
-        <h1 id="hero-title">黄腾<span>Teng Huang<span class="name-dot">.</span></span></h1>
-        <p class="hero-focus">毫米波无线感知与泛化</p>
-        <p class="hero-intro">西安交通大学计算机科学与技术学院博士研究生，师从丁菡教授。我的研究关注毫米波信号生成、人体感知与跨场景泛化，也关心这些方法如何在真实环境中使用。</p>
+        <h1 id="hero-title">黄腾 <span>Teng Huang</span></h1>
+        <p class="hero-focus">西安交通大学 · 计算机科学与技术学院</p>
+        <p class="hero-intro">目前是博士研究生，师从丁菡教授，主要研究毫米波无线感知及泛化。对信号生成、人体感知和模型部署感兴趣，还在继续学习和探索。</p>
         <div class="hero-actions">
-          <a class="primary-button" href="#research">阅读论文 <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#research">论文 ↓</a>
           <a class="text-link" href="https://github.com/friendlyCamel" target="_blank" rel="noreferrer">GitHub ↗</a>
           <a class="text-link hero-email" href="mailto:740464911@qq.com">740464911@qq.com ↗</a>
         </div>
-        <p class="hero-location"><span class="location-dot" aria-hidden="true"></span> 西安，中国 <span> / </span> Wireless sensing · Generalization</p>
-      </div>
-      <div class="signal-stage" aria-label="无线感知主题动态图形">
-        <canvas id="signal-canvas" aria-hidden="true"></canvas>
-        <div class="stage-topline"><span>WIRELESS SENSING</span><span class="live-indicator"><i></i> EXPLORING</span></div>
-        <div class="stage-coordinate">SIGNAL → REPRESENTATION → PERCEPTION</div>
-        <div class="stage-readout"><span>01 / RF</span><div><strong>Beyond a single scene.</strong><small>毫米波 · 泛化 · 真实场景</small></div></div>
+        <p class="hero-location">西安，中国</p>
       </div>
     </section>
 
@@ -53,6 +46,12 @@
       <div class="section-bar">
         <div><p class="section-index">01 / Research</p><h2 id="papers-title">论文</h2></div>
         <p class="section-description">从信号生成到鲁棒感知，<br />探索毫米波感知的泛化能力。</p>
+      </div>
+      <div class="signal-stage" aria-label="无线感知主题动态图形">
+        <canvas id="signal-canvas" aria-hidden="true"></canvas>
+        <div class="stage-topline"><span>WIRELESS SENSING</span><span class="live-indicator"><i></i> EXPLORING</span></div>
+        <div class="stage-coordinate">SIGNAL → REPRESENTATION → PERCEPTION</div>
+        <div class="stage-readout"><span>01 / RF</span><div><strong>Beyond a single scene.</strong><small>毫米波 · 泛化 · 真实场景</small></div></div>
       </div>
       <article class="paper paper-featured" id="paper-mmgen">
         <div class="paper-figure">
@@ -110,8 +109,8 @@
     <section class="section projects" id="work" aria-labelledby="work-title">
       <div class="section-bar"><div><p class="section-index">02 / Projects &amp; experiments</p><h2 id="work-title">项目与探索</h2></div><a class="text-link" href="https://github.com/friendlyCamel?tab=repositories" target="_blank" rel="noreferrer">全部开源仓库 ↗</a></div>
       <article class="stroke-project">
-        <div><span class="section-index">MEDICAL AI / COLLABORATIVE PROJECT</span><h3>AI Stroke</h3><p class="stroke-subtitle">缺血性卒中预警与辅助决策</p></div>
-        <div><p>参与国家科技重大专项中患者行为感知相关研究与系统实现，连接院前识别、风险评估和院内辅助决策。</p><p class="project-role"><b>我的工作</b> / 系统部署与运维、医院对接、数据采集与处理，以及部分步态评估模块。与临床团队的持续协作，也让我更关注研究方法在真实工作流程中的表现。</p></div>
+        <div><h3>AI Stroke</h3><p class="stroke-subtitle">缺血性卒中预警与辅助决策</p></div>
+        <div><p>参与国家科技重大专项中的患者行为感知研究与系统实现。</p><p class="project-role">在项目中主要做系统部署与运维、医院对接和数据采集处理，也参与了部分步态评估模块。</p></div>
       </article>
       <div class="tool-grid">
         <a class="tool-card" href="https://github.com/friendlyCamel/RealTimeCapture-mmw" target="_blank" rel="noreferrer"><span class="tool-category">DATA COLLECTION <span>↗</span></span><h3>RealTimeCapture-mmw</h3><p>基于 UDP 的毫米波原始数据实时采集工具，把雷达实验中的采集步骤整理成可复用代码。</p><span class="tool-footer">Python · mmWave</span></a>
@@ -134,14 +133,12 @@
     </section>
 
     <section class="section about" id="about" aria-labelledby="about-title">
-      <div class="section-bar"><div><p class="section-index">04 / About</p><h2 id="about-title">关于我</h2></div><span class="section-description">Home in Xi’an. Curious about elsewhere.</span></div>
+      <div class="section-bar"><div><p class="section-index">04 / About</p><h2 id="about-title">关于我</h2></div></div>
       <div class="about-layout">
         <div class="about-prose">
-          <p class="about-lead">我在西安求学，也在这里开始认识研究。</p>
-          <p>从计算机本科到硕博连读，我逐渐把兴趣放在一个具体的问题上：感知方法换一个环境、面对不同的人，能否仍然可靠？毫米波是目前探索这个问题的起点，多模态感知、具身智能与模型部署则把它引向更广的方向。</p>
-          <p>我喜欢研究中的协作，也享受把想法做成工具的过程。希望将来能组织一场聚焦无线感知落地的交流活动，让算法、设备与应用现场的人有机会坐在一起。</p>
-          <p>研究之外，阅读和艺术是长久的兴趣。马尔克斯、《悉达多》和《三国演义》，梵高与莫奈，给日常留下了不同的观察角度。也喜欢篮球，偶尔会想，如果能把感知技术用于运动辅助，或做进一款游戏，会是什么样子。</p>
-          <p>本科时在品阁咖啡厅工作过两年，后来参与 E 维团队的电脑义诊。和不同的人交流、一起解决一个小问题，是这些经历里一直喜欢的部分。学术话题、跨学科的想法，或电脑上的小麻烦，都欢迎来信。</p>
+          <p>家在西安，也一直在这里读书。平时喜欢阅读、看画、听音乐和打篮球。常读的书有马尔克斯的小说、《悉达多》和《三国演义》，喜欢的画家有梵高和莫奈。</p>
+          <p>本科时在品阁咖啡厅工作过两年，也参加过 E 维团队的电脑义诊。对不同学科的话题都挺好奇，欢迎交流。</p>
+          <p>以后想尝试游戏制作、运动辅助模型和穿戴设备，也希望有机会组织一次关注应用落地的无线感知交流活动。目前先继续做好博士阶段的研究。</p>
           <a class="inline-email" href="mailto:740464911@qq.com">740464911@qq.com <span>↗</span></a>
         </div>
         <aside class="education" aria-label="教育经历与研究兴趣">
@@ -156,7 +153,7 @@
     </section>
 
     <section class="section travels" id="travel" aria-labelledby="travel-title">
-      <div class="section-bar"><div><p class="section-index">05 / Places</p><h2 id="travel-title">足迹</h2></div><p class="section-description">从西安出发，再带着见闻回来。</p></div>
+      <div class="section-bar"><div><p class="section-index">05 / Places</p><h2 id="travel-title">去过的地方</h2></div></div>
       <div class="travel-layout">
         <figure class="china-map">
           <img src="images/travel-china.svg" alt="中国旅行足迹地图：已到访辽宁、内蒙古、北京、天津、山西、山东、河南、江苏、浙江、湖北、江西、福建、广东、湖南、贵州、广西、四川、重庆、甘肃，家乡西安位于陕西。" width="900" height="690" loading="lazy" />
@@ -164,14 +161,14 @@
         </figure>
         <div class="travel-aside">
           <p class="travel-home">西安<span>HOME / XI’AN</span></p>
-          <p>熟悉的城市是生活的坐标。旅行让我看看别处的人怎样生活，也为日常添一点新的视角。</p>
+          <p>家乡在陕西西安。国内去过一些地方，国外目前去过英国伦敦。</p>
           <details class="visited-list"><summary>国内到访地区</summary><p>辽宁、内蒙古、北京、天津、山西、山东、河南、江苏、浙江、湖北、江西、福建、广东、湖南、贵州、广西、四川、重庆、甘肃。家乡：陕西西安。</p></details>
           <div class="london-map"><iframe title="英国伦敦的 OpenStreetMap 地图" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.4%2C51.38%2C0.13%2C51.66&amp;layer=mapnik&amp;marker=51.5074%2C-0.1278" loading="lazy" referrerpolicy="no-referrer"></iframe><a href="https://www.openstreetmap.org/?mlat=51.5074&amp;mlon=-0.1278#map=11/51.5074/-0.1278" target="_blank" rel="noreferrer"><span>伦敦 / London</span><span>UNITED KINGDOM ↗</span></a></div>
         </div>
       </div>
     </section>
 
-    <section class="contact" id="contact" aria-labelledby="contact-title"><p class="eyebrow">LET’S TALK</p><h2 id="contact-title">欢迎交流。</h2><p>无线感知、研究合作，或一个有意思的话题。</p><a href="mailto:740464911@qq.com">740464911@qq.com <span aria-hidden="true">↗</span></a></section>
+    <section class="section contact" id="contact" aria-labelledby="contact-title"><h2 id="contact-title">联系</h2><p>欢迎邮件交流。</p><a href="mailto:740464911@qq.com">740464911@qq.com <span aria-hidden="true">↗</span></a></section>
   </main>
   <footer class="site-footer"><p>© <span data-year>2026</span> 黄腾 / Teng Huang</p><a href="https://github.com/friendlyCamel" target="_blank" rel="noreferrer">GitHub ↗</a><a href="#top">回到顶部 ↑</a></footer>
 </body>
