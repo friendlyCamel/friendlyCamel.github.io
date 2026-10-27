@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#edebe3" />
+    <meta
+      name="description"
+      content="Teng Huang 的个人主页，关注毫米波雷达、无线感知、信号生成与智能系统。"
+    />
+    <meta property="og:title" content="Teng Huang — Wireless Sensing Researcher" />
+    <meta
+      property="og:description"
+      content="Paving the way for wireless sensing to become a practical reality."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://friendlycamel.github.io/" />
+    <title>Teng Huang — Wireless Sensing Researcher</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/portfolio.css" />
+    <script src="assets/js/portfolio.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <header class="site-header" data-header>
+      <a class="wordmark" href="#top" aria-label="返回首页">
+        <span class="wordmark-mark" aria-hidden="true">TH</span>
+        <span class="wordmark-text">Teng Huang</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="主导航">
+        <a href="#research">研究</a>
+        <a href="#work">项目</a>
+        <a href="#about">关于</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换深浅主题">
+          <span aria-hidden="true">◐</span>
+        </button>
+        <a class="small-button" href="mailto:740464911@qq.com">联系我 <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">Wireless Sensing · Research &amp; Engineering</p>
+          <h1 id="hero-title" class="reveal">
+            让无线感知，<br />
+            <span>从信号走向现实。</span>
+          </h1>
+          <p class="hero-intro reveal">
+            我是 <strong>Teng Huang</strong>，来自西安交通大学。关注毫米波雷达、
+            信号生成与智能感知系统——把复杂的无线信号，变成真实世界里可靠、可用的能力。
+          </p>
+          <div class="hero-actions reveal">
+            <a class="primary-button" href="#work">查看项目 <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="https://github.com/friendlyCamel" target="_blank" rel="noreferrer">
+              GitHub / friendlyCamel <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <ul class="hero-meta reveal" aria-label="个人信息">
+            <li><span>现于</span> 西安交通大学</li>
+            <li><span>坐标</span> 西安，中国</li>
+            <li><span>状态</span> Open to collaboration</li>
+          </ul>
+        </div>
+
+        <div class="signal-stage reveal" aria-label="毫米波信号扫描可视化">
+          <canvas id="signal-canvas" aria-hidden="true"></canvas>
+          <div class="stage-grid" aria-hidden="true"></div>
+          <div class="stage-topline">
+            <span>LIVE SENSING FIELD</span>
+            <span class="live-indicator"><i></i> ACTIVE</span>
+          </div>
+          <div class="stage-coordinate stage-coordinate--x">RANGE / 0—12 m</div>
+          <div class="stage-coordinate stage-coordinate--y">AZIMUTH / ±60°</div>
+          <div class="stage-readout">
+            <span class="readout-index">01</span>
+            <div>
+              <strong>See beyond sight.</strong>
+              <small>RF · PERCEPTION · INTELLIGENCE</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="signal-strip" aria-label="研究流程">
+        <p>PHYSICAL WORLD</p><i aria-hidden="true"></i>
+        <p>RADIO SIGNAL</p><i aria-hidden="true"></i>
+        <p>LEARNED REPRESENTATION</p><i aria-hidden="true"></i>
+        <p>ACTIONABLE INSIGHT</p>
+      </section>
+
+      <section class="section research" id="research" aria-labelledby="research-title">
+        <div class="section-heading reveal">
+          <p class="section-index">01 / Research</p>
+          <h2 id="research-title">在看不见的信号里，<br />找到可理解的世界。</h2>
+          <p>
+            我的工作横跨感知、生成与系统实现。目标不是追逐单一模型指标，
+            而是让无线感知在数据稀缺、环境变化和真实部署条件下依然成立。
+          </p>
+        </div>
+
+        <div class="research-grid">
+          <article class="research-card reveal">
+            <span class="card-number">01</span>
+            <div class="research-glyph glyph-wave" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <h3>毫米波感知</h3>
+            <p>从距离、方位、速度与点云中理解人体、动作和环境，连接信号处理与机器学习。</p>
+            <small>mmWave sensing</small>
+          </article>
+          <article class="research-card reveal">
+            <span class="card-number">02</span>
+            <div class="research-glyph glyph-snapshot" aria-hidden="true"><i></i></div>
+            <h3>信号生成</h3>
+            <p>探索更高效的数据生成与泛化方法，降低无线感知研究对昂贵采集流程的依赖。</p>
+            <small>Signal generation</small>
+          </article>
+          <article class="research-card reveal">
+            <span class="card-number">03</span>
+            <div class="research-glyph glyph-system" aria-hidden="true"><i></i><i></i><i></i></div>
+            <h3>智能系统</h3>
+            <p>把研究原型推进到可运行的工具、数据管线与智能体，让方法能够被验证和复用。</p>
+            <small>Intelligent systems</small>
+          </article>
+        </div>
+      </section>
+
+      <section class="section work" id="work" aria-labelledby="work-title">
+        <div class="section-bar reveal">
+          <div>
+            <p class="section-index">02 / Selected work</p>
+            <h2 id="work-title">代表项目</h2>
+          </div>
+          <a class="text-link" href="https://github.com/friendlyCamel?tab=repositories" target="_blank" rel="noreferrer">
+            全部仓库 <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <article class="featured-project reveal">
+          <a class="project-visual project-visual--mmgen" href="https://github.com/friendlyCamel/mmGen" target="_blank" rel="noreferrer" aria-label="打开 mmGen GitHub 仓库">
+            <div class="visual-label"><span>RANGE–AZIMUTH FIELD</span><span>GENERATED / REAL</span></div>
+            <div class="range-map" aria-hidden="true">
+              <span class="range-person"></span>
+              <span class="range-noise range-noise--1"></span>
+              <span class="range-noise range-noise--2"></span>
+              <span class="range-noise range-noise--3"></span>
+              <span class="range-scan"></span>
+            </div>
+            <span class="visual-code">SINGLE SNAPSHOT → GENERALIZED SIGNAL</span>
+          </a>
+          <div class="project-copy">
+            <div class="project-kicker">
+              <span>Featured · Research Code</span>
+              <span class="repo-stat" data-repo="mmGen">Python · <b>Open source</b></span>
+            </div>
+            <h3>mmGen</h3>
+            <p class="project-subtitle">One Snapshot is All You Need</p>
+            <p>
+              面向毫米波信号生成的通用方法。以一次快照为起点，探索更灵活的数据构建方式，
+              为跨场景的无线感知研究提供可复现实现。
+            </p>
+            <ul class="tag-list" aria-label="项目关键词">
+              <li>mmWave</li><li>Signal Generation</li><li>PyTorch</li><li>Open Source</li>
+            </ul>
+            <a class="project-link" href="https://github.com/friendlyCamel/mmGen" target="_blank" rel="noreferrer">
+              查看代码与说明 <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <div class="project-list">
+          <a class="project-row reveal" href="https://github.com/friendlyCamel/mmReID-Dataset" target="_blank" rel="noreferrer">
+            <span class="project-row-index">02</span>
+            <div>
+              <h3>mmReID Dataset</h3>
+              <p>基于毫米波雷达点云的步态重识别数据集，包含距离、方位、俯仰、速度与强度信息。</p>
+            </div>
+            <ul class="tag-list"><li>Dataset</li><li>Gait ReID</li><li>Point Cloud</li></ul>
+            <span class="row-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="project-row reveal" href="https://github.com/friendlyCamel/RealTimeCapture-mmw" target="_blank" rel="noreferrer">
+            <span class="project-row-index">03</span>
+            <div>
+              <h3>Real-time mmWave Capture</h3>
+              <p>通过网络层 UDP 数据包监控，实时捕获毫米波雷达原始数据的轻量工具。</p>
+            </div>
+            <ul class="tag-list"><li>Python</li><li>UDP</li><li>Data Pipeline</li></ul>
+            <span class="row-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="project-row reveal" href="https://github.com/friendlyCamel/TTQQ" target="_blank" rel="noreferrer">
+            <span class="project-row-index">04</span>
+            <div>
+              <h3>TTQQ · Research Agent</h3>
+              <p>面向研究工作流的智能体实验，探索信息组织、工具调用与研究自动化。</p>
+            </div>
+            <ul class="tag-list"><li>Agent</li><li>Python</li><li>Research Tools</li></ul>
+            <span class="row-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="section about" id="about" aria-labelledby="about-title">
+        <div class="about-aside reveal">
+          <p class="section-index">03 / About</p>
+          <div class="monogram" aria-hidden="true">
+            <span>T</span><span>H</span>
+            <i></i>
+          </div>
+        </div>
+        <div class="about-copy reveal">
+          <h2 id="about-title">研究，应该既有想象力，<br />也能经得起现实。</h2>
+          <div class="about-columns">
+            <p>
+              我对无线感知的兴趣，来自它观察世界的独特方式：不依赖可见光，却能捕捉运动、结构和变化。
+              这使它有机会在隐私友好、弱光、遮挡等复杂条件下创造真正有用的系统。
+            </p>
+            <p>
+              我喜欢把一个研究问题一路推进：从数据采集与信号处理，到模型设计、实验验证，再到开放源码。
+              如果你也在探索毫米波感知、生成模型或研究智能体，欢迎交流。
+            </p>
+          </div>
+          <div class="about-links">
+            <a href="https://github.com/friendlyCamel" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+            <a href="mailto:740464911@qq.com">Email <span>↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" aria-labelledby="contact-title">
+        <div class="contact-orbit" aria-hidden="true"><i></i><i></i><i></i></div>
+        <p class="eyebrow">Have a question, idea, or collaboration?</p>
+        <h2 id="contact-title">一起做点有信号的事。</h2>
+        <a href="mailto:740464911@qq.com">740464911@qq.com <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span data-year></span> Teng Huang</p>
+      <p>Paving the way for wireless sensing to become a practical reality.</p>
+      <a href="#top">回到顶部 ↑</a>
+    </footer>
+  </body>
+</html>
