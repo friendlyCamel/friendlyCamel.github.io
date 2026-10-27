@@ -6,16 +6,16 @@
     <meta name="theme-color" content="#edebe3" />
     <meta
       name="description"
-      content="Teng Huang 的个人主页，关注毫米波雷达、无线感知、信号生成与智能系统。"
+      content="黄腾（Teng Huang）的个人主页，西安交通大学计算机科学与技术学院博士研究生，研究毫米波无线智能感知与泛化。"
     />
-    <meta property="og:title" content="Teng Huang — Wireless Sensing Researcher" />
+    <meta property="og:title" content="黄腾 · Teng Huang — Wireless Sensing Researcher" />
     <meta
       property="og:description"
       content="Paving the way for wireless sensing to become a practical reality."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://friendlycamel.github.io/" />
-    <title>Teng Huang — Wireless Sensing Researcher</title>
+    <title>黄腾 · Teng Huang — Wireless Sensing Researcher</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/css/portfolio.css" />
     <script src="assets/js/portfolio.js" defer></script>
@@ -32,6 +32,7 @@
       <nav class="desktop-nav" aria-label="主导航">
         <a href="#research">研究</a>
         <a href="#work">项目</a>
+        <a href="#publications">成果</a>
         <a href="#about">关于</a>
       </nav>
 
@@ -52,8 +53,8 @@
             <span>从信号走向现实。</span>
           </h1>
           <p class="hero-intro reveal">
-            我是 <strong>Teng Huang</strong>，来自西安交通大学。关注毫米波雷达、
-            信号生成与智能感知系统——把复杂的无线信号，变成真实世界里可靠、可用的能力。
+            我是 <strong>黄腾（Teng Huang）</strong>，西安交通大学计算机科学与技术学院博士研究生。
+            研究毫米波无线智能感知与泛化——把复杂的无线信号，变成真实世界里可靠、可用的能力。
           </p>
           <div class="hero-actions reveal">
             <a class="primary-button" href="#work">查看项目 <span aria-hidden="true">↓</span></a>
@@ -62,9 +63,9 @@
             </a>
           </div>
           <ul class="hero-meta reveal" aria-label="个人信息">
-            <li><span>现于</span> 西安交通大学</li>
+            <li><span>身份</span> 2024 级博士研究生</li>
+            <li><span>方向</span> 无线感知与泛化</li>
             <li><span>坐标</span> 西安，中国</li>
-            <li><span>状态</span> Open to collaboration</li>
           </ul>
         </div>
 
@@ -99,8 +100,8 @@
           <p class="section-index">01 / Research</p>
           <h2 id="research-title">在看不见的信号里，<br />找到可理解的世界。</h2>
           <p>
-            我的工作横跨感知、生成与系统实现。目标不是追逐单一模型指标，
-            而是让无线感知在数据稀缺、环境变化和真实部署条件下依然成立。
+            我的工作横跨信号生成、鲁棒感知与系统落地。目标不是追逐单一模型指标，
+            而是让无线感知面对数据稀缺、视角变化和真实部署条件时依然成立。
           </p>
         </div>
 
@@ -122,9 +123,9 @@
           <article class="research-card reveal">
             <span class="card-number">03</span>
             <div class="research-glyph glyph-system" aria-hidden="true"><i></i><i></i><i></i></div>
-            <h3>智能系统</h3>
-            <p>把研究原型推进到可运行的工具、数据管线与智能体，让方法能够被验证和复用。</p>
-            <small>Intelligent systems</small>
+            <h3>泛化与部署</h3>
+            <p>降低环境干扰与视角偏差，把算法推进到可运行的数据管线、医疗协同系统和真实场景。</p>
+            <small>Generalization &amp; deployment</small>
           </article>
         </div>
       </section>
@@ -154,15 +155,19 @@
           </a>
           <div class="project-copy">
             <div class="project-kicker">
-              <span>Featured · Research Code</span>
+              <span>IEEE INFOCOM 2025 · First Author</span>
               <span class="repo-stat" data-repo="mmGen">Python · <b>Open source</b></span>
             </div>
             <h3>mmGen</h3>
             <p class="project-subtitle">One Snapshot is All You Need</p>
             <p>
-              面向毫米波信号生成的通用方法。以一次快照为起点，探索更灵活的数据构建方式，
-              为跨场景的无线感知研究提供可复现实现。
+              针对真实雷达数据采集与标注成本高的问题，从一次快照出发，联合建模人体反射、
+              环境反射与多径传播，生成可用于下游任务训练的毫米波原始信号。
             </p>
+            <div class="project-results" aria-label="实验结果">
+              <span><b>0.91</b> 距离—角度谱 MS-SSIM</span>
+              <span><b>0.89</b> 微多普勒谱 MS-SSIM</span>
+            </div>
             <ul class="tag-list" aria-label="项目关键词">
               <li>mmWave</li><li>Signal Generation</li><li>PyTorch</li><li>Open Source</li>
             </ul>
@@ -176,15 +181,25 @@
           <a class="project-row reveal" href="https://github.com/friendlyCamel/mmReID-Dataset" target="_blank" rel="noreferrer">
             <span class="project-row-index">02</span>
             <div>
-              <h3>mmReID Dataset</h3>
-              <p>基于毫米波雷达点云的步态重识别数据集，包含距离、方位、俯仰、速度与强度信息。</p>
+              <h3>mmReID</h3>
+              <p>突破雷达径向视角限制的步态重识别方法；57 人三场景数据集，在 ±45° 行走方向达到 79.10% Rank-1。</p>
             </div>
-            <ul class="tag-list"><li>Dataset</li><li>Gait ReID</li><li>Point Cloud</li></ul>
+            <ul class="tag-list"><li>IMWUT 2026</li><li>First Author</li><li>+34.84 pp</li></ul>
             <span class="row-arrow" aria-hidden="true">↗</span>
           </a>
 
-          <a class="project-row reveal" href="https://github.com/friendlyCamel/RealTimeCapture-mmw" target="_blank" rel="noreferrer">
+          <article class="project-row project-row--static reveal">
             <span class="project-row-index">03</span>
+            <div>
+              <h3>AI-assisted Stroke Care</h3>
+              <p>参与缺血性卒中预警与辅助决策系统，从医院对接、数据采集处理到部分步态评估模块，推动院前识别与院内救治闭环。</p>
+            </div>
+            <ul class="tag-list"><li>Medical AI</li><li>5 Hospitals</li><li>Deployed</li></ul>
+            <span class="row-status">FIELD</span>
+          </article>
+
+          <a class="project-row reveal" href="https://github.com/friendlyCamel/RealTimeCapture-mmw" target="_blank" rel="noreferrer">
+            <span class="project-row-index">04</span>
             <div>
               <h3>Real-time mmWave Capture</h3>
               <p>通过网络层 UDP 数据包监控，实时捕获毫米波雷达原始数据的轻量工具。</p>
@@ -192,22 +207,62 @@
             <ul class="tag-list"><li>Python</li><li>UDP</li><li>Data Pipeline</li></ul>
             <span class="row-arrow" aria-hidden="true">↗</span>
           </a>
+        </div>
+      </section>
 
-          <a class="project-row reveal" href="https://github.com/friendlyCamel/TTQQ" target="_blank" rel="noreferrer">
-            <span class="project-row-index">04</span>
-            <div>
-              <h3>TTQQ · Research Agent</h3>
-              <p>面向研究工作流的智能体实验，探索信息组织、工具调用与研究自动化。</p>
-            </div>
-            <ul class="tag-list"><li>Agent</li><li>Python</li><li>Research Tools</li></ul>
-            <span class="row-arrow" aria-hidden="true">↗</span>
+      <section class="section publications" id="publications" aria-labelledby="publications-title">
+        <div class="section-bar reveal">
+          <div>
+            <p class="section-index">03 / Research record</p>
+            <h2 id="publications-title">论文与成果</h2>
+          </div>
+          <p class="publication-note">5 篇 CCF-A 论文<br />2 篇第一作者 · 2 篇共同第一作者</p>
+        </div>
+
+        <div class="record-grid reveal" aria-label="研究成果概览">
+          <div><strong>05</strong><span>CCF-A papers</span></div>
+          <div><strong>04</strong><span>First / co-first</span></div>
+          <div><strong>01 + 05</strong><span>Granted + accepted patents</span></div>
+          <div><strong>03</strong><span>ACM TURC · 2024—26</span></div>
+        </div>
+
+        <div class="publication-list">
+          <a class="publication-row reveal" href="https://doi.org/10.1109/INFOCOM55648.2025.11044473" target="_blank" rel="noreferrer">
+            <span>01</span>
+            <h3>One Snapshot is All You Need: A Generalized Method for mmWave Signal Generation</h3>
+            <p>IEEE INFOCOM 2025<br /><b>First author</b></p>
+            <i aria-hidden="true">↗</i>
+          </a>
+          <a class="publication-row reveal" href="https://doi.org/10.1145/3831953" target="_blank" rel="noreferrer">
+            <span>02</span>
+            <h3>Beyond Radial Limits: Recovering Direction-Invariant Walking Dynamics for Robust mmWave Radar Person Re-Identification</h3>
+            <p>ACM IMWUT 2026<br /><b>First author</b></p>
+            <i aria-hidden="true">↗</i>
+          </a>
+          <a class="publication-row reveal" href="https://doi.org/10.1145/3770708" target="_blank" rel="noreferrer">
+            <span>03</span>
+            <h3>We Can Hear You with mmWave Radar! An End-to-End Eavesdropping System</h3>
+            <p>ACM IMWUT 2025<br /><b>Co-first author</b></p>
+            <i aria-hidden="true">↗</i>
+          </a>
+          <div class="publication-row reveal">
+            <span>04</span>
+            <h3>mmWave-Aided Unified Speech Enhancement and Separation without Speaker Count Prior</h3>
+            <p>IEEE INFOCOM 2026<br /><b>Co-first author</b></p>
+            <i aria-hidden="true">—</i>
+          </div>
+          <a class="publication-row reveal" href="https://doi.org/10.1109/TMC.2026.3673171" target="_blank" rel="noreferrer">
+            <span>05</span>
+            <h3>Active Domain Adaptation for mmWave-based HAR via Rényi Entropy-based Uncertainty Estimation</h3>
+            <p>IEEE TMC 2026<br /><b>Second author</b></p>
+            <i aria-hidden="true">↗</i>
           </a>
         </div>
       </section>
 
       <section class="section about" id="about" aria-labelledby="about-title">
         <div class="about-aside reveal">
-          <p class="section-index">03 / About</p>
+          <p class="section-index">04 / About</p>
           <div class="monogram" aria-hidden="true">
             <span>T</span><span>H</span>
             <i></i>
@@ -217,13 +272,18 @@
           <h2 id="about-title">研究，应该既有想象力，<br />也能经得起现实。</h2>
           <div class="about-columns">
             <p>
-              我对无线感知的兴趣，来自它观察世界的独特方式：不依赖可见光，却能捕捉运动、结构和变化。
-              这使它有机会在隐私友好、弱光、遮挡等复杂条件下创造真正有用的系统。
+              我从计算机科学出发，持续研究毫米波无线智能感知。博士课题聚焦毫米波信号驱动的
+              无线智能感知及其泛化关键技术，让模型面对跨视角、跨场景和有限数据时依然可靠。
             </p>
             <p>
-              我喜欢把一个研究问题一路推进：从数据采集与信号处理，到模型设计、实验验证，再到开放源码。
-              如果你也在探索毫米波感知、生成模型或研究智能体，欢迎交流。
+              我喜欢把研究一路推进到真实场景：从数据采集、信号建模和算法验证，到医院部署与临床反馈。
+              曾主持跨场景无线感知课题，并连续参与 2024—2026 年 ACM TURC 图灵大会。
             </p>
+          </div>
+          <div class="education-timeline" aria-label="教育经历">
+            <div><time>2024 — 至今</time><p><b>博士研究生</b><br />西安交通大学 · 计算机科学与技术学院</p></div>
+            <div><time>2022 — 2024</time><p><b>硕士研究生</b><br />西安交通大学</p></div>
+            <div><time>2018 — 2022</time><p><b>本科</b><br />西安交通大学 · 计算机科学与技术学院</p></div>
           </div>
           <div class="about-links">
             <a href="https://github.com/friendlyCamel" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
