@@ -1,355 +1,178 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#edebe3" />
-    <meta
-      name="description"
-      content="黄腾（Teng Huang）的个人主页，西安交通大学计算机科学与技术学院博士研究生，研究毫米波无线智能感知与泛化。"
-    />
-    <meta property="og:title" content="黄腾 · Teng Huang — Wireless Sensing Researcher" />
-    <meta
-      property="og:description"
-      content="Paving the way for wireless sensing to become a practical reality."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://friendlycamel.github.io/" />
-    <title>黄腾 · Teng Huang — Wireless Sensing Researcher</title>
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="assets/css/portfolio.css" />
-    <script src="assets/js/portfolio.js" defer></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">跳到主要内容</a>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#edebe3" />
+  <meta name="description" content="黄腾（Teng Huang），西安交通大学博士研究生，师从丁菡教授。研究毫米波无线感知与泛化，分享论文、开源工具与生活片段。" />
+  <meta property="og:title" content="黄腾 · Teng Huang" />
+  <meta property="og:description" content="毫米波无线感知与泛化 · 论文、探索与日常" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://friendlycamel.github.io/" />
+  <title>黄腾 · Teng Huang | 无线感知与泛化</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/portfolio.css" />
+  <script src="assets/js/portfolio.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="黄腾，返回首页"><span class="wordmark-mark">TH</span><span>黄腾 / Teng Huang</span></a>
+    <nav class="desktop-nav" aria-label="主导航">
+      <a href="#research">论文</a><a href="#work">项目与探索</a><a href="#news">动态</a><a href="#about">关于</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换深浅主题"><span aria-hidden="true">◐</span></button>
+      <a class="small-button" href="mailto:740464911@qq.com">Email ↗</a>
+    </div>
+  </header>
 
-    <header class="site-header" data-header>
-      <a class="wordmark" href="#top" aria-label="返回首页">
-        <span class="wordmark-mark" aria-hidden="true">TH</span>
-        <span class="wordmark-text">Teng Huang</span>
-      </a>
-
-      <nav class="desktop-nav" aria-label="主导航">
-        <a href="#research">研究</a>
-        <a href="#work">项目</a>
-        <a href="#publications">成果</a>
-        <a href="#about">关于</a>
-        <a href="#life">生活</a>
-      </nav>
-
-      <div class="header-actions">
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换深浅主题">
-          <span aria-hidden="true">◐</span>
-        </button>
-        <a class="small-button" href="mailto:740464911@qq.com">联系我 <span aria-hidden="true">↗</span></a>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">XI’AN JIAOTONG UNIVERSITY · PHD STUDENT</p>
+        <h1 id="hero-title">黄腾<span>Teng Huang<span class="name-dot">.</span></span></h1>
+        <p class="hero-focus">毫米波无线感知与泛化</p>
+        <p class="hero-intro">西安交通大学计算机科学与技术学院博士研究生，师从丁菡教授。我的研究关注毫米波信号生成、人体感知与跨场景泛化，也关心这些方法如何在真实环境中使用。</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#research">阅读论文 <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="https://github.com/friendlyCamel" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a class="text-link hero-email" href="mailto:740464911@qq.com">740464911@qq.com ↗</a>
+        </div>
+        <p class="hero-location"><span class="location-dot" aria-hidden="true"></span> 西安，中国 <span> / </span> Wireless sensing · Generalization</p>
       </div>
-    </header>
+      <div class="signal-stage" aria-label="无线感知主题动态图形">
+        <canvas id="signal-canvas" aria-hidden="true"></canvas>
+        <div class="stage-topline"><span>WIRELESS SENSING</span><span class="live-indicator"><i></i> EXPLORING</span></div>
+        <div class="stage-coordinate">SIGNAL → REPRESENTATION → PERCEPTION</div>
+        <div class="stage-readout"><span>01 / RF</span><div><strong>Beyond a single scene.</strong><small>毫米波 · 泛化 · 真实场景</small></div></div>
+      </div>
+    </section>
 
-    <main id="main">
-      <section class="hero" id="top" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow reveal">Wireless Sensing · Research &amp; Engineering</p>
-          <h1 id="hero-title" class="reveal">
-            让无线感知，<br />
-            <span>从信号走向现实。</span>
-          </h1>
-          <p class="hero-intro reveal">
-            我是 <strong>黄腾（Teng Huang）</strong>，西安交通大学计算机科学与技术学院博士研究生。
-            跟随丁菡教授研究毫米波无线智能感知与泛化——把复杂的无线信号，变成真实世界里可靠、可用的能力。
-          </p>
-          <div class="hero-actions reveal">
-            <a class="primary-button" href="#work">查看项目 <span aria-hidden="true">↓</span></a>
-            <a class="text-link" href="https://github.com/friendlyCamel" target="_blank" rel="noreferrer">
-              GitHub / friendlyCamel <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-          <ul class="hero-meta reveal" aria-label="个人信息">
-            <li><span>身份</span> 2024 级博士研究生</li>
-            <li><span>方向</span> 无线感知与泛化</li>
-            <li><span>坐标</span> 西安，中国</li>
-          </ul>
+    <section class="section papers" id="research" aria-labelledby="papers-title">
+      <div class="section-bar">
+        <div><p class="section-index">01 / Research</p><h2 id="papers-title">论文</h2></div>
+        <p class="section-description">从信号生成到鲁棒感知，<br />探索毫米波感知的泛化能力。</p>
+      </div>
+      <article class="paper paper-featured" id="paper-mmgen">
+        <div class="paper-figure">
+          <p class="figure-label">mmGen / SYSTEM OVERVIEW</p>
+          <img src="images/research/mmgen-overview.png" alt="mmGen 方法框架：快照重建人体与场景，建模反射及多径，生成毫米波信号" width="1920" height="624" />
+          <span class="figure-caption">一张快照 → 场景与人体建模 → 毫米波原始信号</span>
         </div>
-
-        <div class="signal-stage reveal" aria-label="毫米波信号扫描可视化">
-          <canvas id="signal-canvas" aria-hidden="true"></canvas>
-          <div class="stage-grid" aria-hidden="true"></div>
-          <div class="stage-topline">
-            <span>LIVE SENSING FIELD</span>
-            <span class="live-indicator"><i></i> ACTIVE</span>
-          </div>
-          <div class="stage-coordinate stage-coordinate--x">RANGE / 0—12 m</div>
-          <div class="stage-coordinate stage-coordinate--y">AZIMUTH / ±60°</div>
-          <div class="stage-readout">
-            <span class="readout-index">01</span>
-            <div>
-              <strong>See beyond sight.</strong>
-              <small>RF · PERCEPTION · INTELLIGENCE</small>
-            </div>
-          </div>
+        <div class="paper-content">
+          <div class="paper-meta"><span>IEEE INFOCOM 2025</span><span>第一作者</span></div>
+          <h3>mmGen</h3>
+          <p class="paper-title" lang="en">One Snapshot is All You Need: A Generalized Method for mmWave Signal Generation</p>
+          <p class="paper-summary">用一张快照重建感知场景，联合人体反射、环境反射与多径建模，生成毫米波原始信号，降低真实数据采集与标注的成本。</p>
+          <div class="resource-links"><a href="https://doi.org/10.1109/INFOCOM55648.2025.11044473" target="_blank" rel="noreferrer">论文 / DOI ↗</a><a href="https://github.com/friendlyCamel/mmGen" target="_blank" rel="noreferrer">代码 ↗</a></div>
         </div>
-      </section>
-
-      <section class="signal-strip" aria-label="研究流程">
-        <p>PHYSICAL WORLD</p><i aria-hidden="true"></i>
-        <p>RADIO SIGNAL</p><i aria-hidden="true"></i>
-        <p>LEARNED REPRESENTATION</p><i aria-hidden="true"></i>
-        <p>ACTIONABLE INSIGHT</p>
-      </section>
-
-      <section class="section research" id="research" aria-labelledby="research-title">
-        <div class="section-heading reveal">
-          <p class="section-index">01 / Research</p>
-          <h2 id="research-title">在看不见的信号里，<br />找到可理解的世界。</h2>
-          <p>
-            我的工作横跨信号生成、鲁棒感知与系统落地。目标不是追逐单一模型指标，
-            而是让无线感知面对数据稀缺、视角变化和真实部署条件时依然成立。
-          </p>
-        </div>
-
-        <div class="research-grid">
-          <article class="research-card reveal">
-            <span class="card-number">01</span>
-            <div class="research-glyph glyph-wave" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-            <h3>毫米波感知</h3>
-            <p>从距离、方位、速度与点云中理解人体、动作和环境，连接信号处理与机器学习。</p>
-            <small>mmWave sensing</small>
-          </article>
-          <article class="research-card reveal">
-            <span class="card-number">02</span>
-            <div class="research-glyph glyph-snapshot" aria-hidden="true"><i></i></div>
-            <h3>信号生成</h3>
-            <p>探索更高效的数据生成与泛化方法，降低无线感知研究对昂贵采集流程的依赖。</p>
-            <small>Signal generation</small>
-          </article>
-          <article class="research-card reveal">
-            <span class="card-number">03</span>
-            <div class="research-glyph glyph-system" aria-hidden="true"><i></i><i></i><i></i></div>
-            <h3>泛化与部署</h3>
-            <p>降低环境干扰与视角偏差，把算法推进到可运行的数据管线、医疗协同系统和真实场景。</p>
-            <small>Generalization &amp; deployment</small>
-          </article>
-        </div>
-      </section>
-
-      <section class="section work" id="work" aria-labelledby="work-title">
-        <div class="section-bar reveal">
-          <div>
-            <p class="section-index">02 / Selected work</p>
-            <h2 id="work-title">代表项目</h2>
-          </div>
-          <a class="text-link" href="https://github.com/friendlyCamel?tab=repositories" target="_blank" rel="noreferrer">
-            全部仓库 <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-
-        <article class="featured-project reveal">
-          <a class="project-visual project-visual--mmgen" href="https://github.com/friendlyCamel/mmGen" target="_blank" rel="noreferrer" aria-label="打开 mmGen GitHub 仓库">
-            <div class="visual-label"><span>RANGE–AZIMUTH FIELD</span><span>GENERATED / REAL</span></div>
-            <div class="range-map" aria-hidden="true">
-              <span class="range-person"></span>
-              <span class="range-noise range-noise--1"></span>
-              <span class="range-noise range-noise--2"></span>
-              <span class="range-noise range-noise--3"></span>
-              <span class="range-scan"></span>
-            </div>
-            <span class="visual-code">SINGLE SNAPSHOT → GENERALIZED SIGNAL</span>
-          </a>
-          <div class="project-copy">
-            <div class="project-kicker">
-              <span>IEEE INFOCOM 2025 · First Author</span>
-              <span class="repo-stat" data-repo="mmGen">Python · <b>Open source</b></span>
-            </div>
-            <h3>mmGen</h3>
-            <p class="project-subtitle">One Snapshot is All You Need</p>
-            <p>
-              针对真实雷达数据采集与标注成本高的问题，从一次快照出发，联合建模人体反射、
-              环境反射与多径传播，生成可用于下游任务训练的毫米波原始信号。
-            </p>
-            <div class="project-results" aria-label="实验结果">
-              <span><b>0.91</b> 距离—角度谱 MS-SSIM</span>
-              <span><b>0.89</b> 微多普勒谱 MS-SSIM</span>
-            </div>
-            <ul class="tag-list" aria-label="项目关键词">
-              <li>mmWave</li><li>Signal Generation</li><li>PyTorch</li><li>Open Source</li>
-            </ul>
-            <a class="project-link" href="https://github.com/friendlyCamel/mmGen" target="_blank" rel="noreferrer">
-              查看代码与说明 <span aria-hidden="true">↗</span>
-            </a>
-          </div>
+      </article>
+      <article class="paper paper-upcoming" id="paper-mmgen-plus">
+        <div><p class="paper-meta">ONGOING RESEARCH</p><h3>mmGen<span class="plus-mark">++</span></h3></div>
+        <div><span class="status-badge">Coming soon</span><p>沿着 mmGen 继续探索信号生成与泛化，研究反射、衍射、多径和材质参数建模，让合成信号更接近真实环境。更多方法与结果将陆续分享。</p></div>
+        <a class="text-link" href="https://github.com/friendlyCamel/mmGenPP" target="_blank" rel="noreferrer">预览 ↗</a>
+      </article>
+      <div class="paper-grid">
+        <article class="paper" id="paper-mmreid">
+          <div class="paper-meta"><span>ACM IMWUT 2026</span><span>第一作者</span></div>
+          <h3>mmReID</h3>
+          <p class="paper-title" lang="en">Beyond Radial Limits: Recovering Direction-Invariant Walking Dynamics for Robust mmWave Radar Person Re-Identification</p>
+          <p class="paper-summary">针对行走方向改变导致的步态特征偏差，通过径向视角对齐恢复方向不变的行走动态，实现更鲁棒的毫米波行人重识别。</p>
+          <img class="paper-inline-figure" src="images/research/mmreid-overview.png" alt="mmReID 的雷达步态感知、径向对齐网络与身份匹配流程" width="1434" height="424" loading="lazy" />
+          <div class="resource-links"><a href="https://doi.org/10.1145/3831953" target="_blank" rel="noreferrer">论文 / DOI ↗</a><a href="https://github.com/friendlyCamel/mmReID-Dataset" target="_blank" rel="noreferrer">数据集 ↗</a></div>
         </article>
+        <article class="paper" id="paper-mmspeech">
+          <div class="paper-meta"><span>ACM IMWUT 2025</span><span>共同第一作者</span></div>
+          <h3>mmSpeech</h3>
+          <p class="paper-title" lang="en">We Can Hear You with mmWave Radar! An End-to-End Eavesdropping System</p>
+          <p class="paper-summary">研究毫米波雷达捕捉的细微振动与语音之间的联系，通过端到端系统重建语音，探索无线信号的语音感知能力及其隐私风险。</p>
+          <div class="paper-motif" aria-hidden="true"><span>VIBRATION</span><div class="wave-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span>SPEECH</span></div>
+          <div class="resource-links"><a href="https://doi.org/10.1145/3770708" target="_blank" rel="noreferrer">论文 / DOI ↗</a></div>
+        </article>
+        <article class="paper" id="paper-radiosep">
+          <div class="paper-meta"><span>IEEE INFOCOM 2026</span><span>共同第一作者</span></div>
+          <h3>RadioSEP</h3>
+          <p class="paper-title" lang="en">mmWave-Aided Unified Speech Enhancement and Separation without Speaker Count Prior</p>
+          <p class="paper-summary">融合毫米波感知与音频，在无需预先给定说话人数的条件下，统一处理语音增强与多人语音分离。</p>
+          <div class="resource-links"><a href="https://doi.org/10.1109/INFOCOM59046.2026.11571653" target="_blank" rel="noreferrer">论文 / DOI ↗</a><a href="https://radiosep.github.io/" target="_blank" rel="noreferrer">论文主页 ↗</a></div>
+        </article>
+        <article class="paper" id="paper-mmada">
+          <div class="paper-meta"><span>IEEE TMC 2026</span><span>第二作者</span></div>
+          <h3>mmADA</h3>
+          <p class="paper-title" lang="en">Active Domain Adaptation for mmWave-Based HAR via Rényi Entropy-Based Uncertainty Estimation</p>
+          <p class="paper-summary">利用 Rényi 熵进行不确定性估计，通过主动域适应，研究毫米波人体活动识别在环境变化下的迁移问题。</p>
+          <div class="resource-links"><a href="https://doi.org/10.1109/TMC.2026.3673171" target="_blank" rel="noreferrer">论文 / DOI ↗</a></div>
+        </article>
+      </div>
+    </section>
 
-        <div class="project-list">
-          <a class="project-row reveal" href="https://github.com/friendlyCamel/mmReID-Dataset" target="_blank" rel="noreferrer">
-            <span class="project-row-index">02</span>
-            <div>
-              <h3>mmReID</h3>
-              <p>突破雷达径向视角限制的步态重识别方法；57 人三场景数据集，在 ±45° 行走方向达到 79.10% Rank-1。</p>
-            </div>
-            <ul class="tag-list"><li>IMWUT 2026</li><li>First Author</li><li>+34.84 pp</li></ul>
-            <span class="row-arrow" aria-hidden="true">↗</span>
-          </a>
+    <section class="section projects" id="work" aria-labelledby="work-title">
+      <div class="section-bar"><div><p class="section-index">02 / Projects &amp; experiments</p><h2 id="work-title">项目与探索</h2></div><a class="text-link" href="https://github.com/friendlyCamel?tab=repositories" target="_blank" rel="noreferrer">全部开源仓库 ↗</a></div>
+      <article class="stroke-project">
+        <div><span class="section-index">MEDICAL AI / COLLABORATIVE PROJECT</span><h3>AI Stroke</h3><p class="stroke-subtitle">缺血性卒中预警与辅助决策</p></div>
+        <div><p>参与国家科技重大专项中患者行为感知相关研究与系统实现，连接院前识别、风险评估和院内辅助决策。</p><p class="project-role"><b>我的工作</b> / 系统部署与运维、医院对接、数据采集与处理，以及部分步态评估模块。与临床团队的持续协作，也让我更关注研究方法在真实工作流程中的表现。</p></div>
+      </article>
+      <div class="tool-grid">
+        <a class="tool-card" href="https://github.com/friendlyCamel/RealTimeCapture-mmw" target="_blank" rel="noreferrer"><span class="tool-category">DATA COLLECTION <span>↗</span></span><h3>RealTimeCapture-mmw</h3><p>基于 UDP 的毫米波原始数据实时采集工具，把雷达实验中的采集步骤整理成可复用代码。</p><span class="tool-footer">Python · mmWave</span></a>
+        <a class="tool-card" href="https://github.com/friendlyCamel/TTQQ" target="_blank" rel="noreferrer"><span class="tool-category">RESEARCH WORKFLOW <span>↗</span></span><h3>HTTT / TTQQ</h3><p>科研命令行 Agent 实验：从问题抽象、跨领域类比和文献检索，走向有证据支持的研究路线。</p><span class="tool-footer">Agent · Research tools</span></a>
+        <a class="tool-card" href="https://github.com/friendlyCamel/CIGI-Can-I-Get-It-" target="_blank" rel="noreferrer"><span class="tool-category">ROBOTICS EXPERIMENT <span>↗</span></span><h3>Can I Get It?</h3><p>模拟机械臂的语义控制探索，尝试把语言层面的任务描述连接到具体动作。</p><span class="tool-footer">Simulation · Embodied AI</span></a>
+        <a class="tool-card" href="https://github.com/friendlyCamel/GPU-available" target="_blank" rel="noreferrer"><span class="tool-category">EVERYDAY UTILITY <span>↗</span></span><h3>checkGPU</h3><p>通过 SSH 查看远程 GPU 状态的 macOS 桌面小挂件，方便随时了解利用率、显存和运行进程。</p><span class="tool-footer">Python · Desktop utility</span></a>
+      </div>
+    </section>
 
-          <article class="project-row project-row--static reveal">
-            <span class="project-row-index">03</span>
-            <div>
-              <h3>AI-assisted Stroke Care</h3>
-              <p>参与缺血性卒中预警与辅助决策系统，从医院对接、数据采集处理到部分步态评估模块，推动院前识别与院内救治闭环。</p>
-            </div>
-            <ul class="tag-list"><li>Medical AI</li><li>5 Hospitals</li><li>Deployed</li></ul>
-            <span class="row-status">FIELD</span>
-          </article>
+    <section class="section news" id="news" aria-labelledby="news-title">
+      <div class="section-bar"><div><p class="section-index">03 / Notes &amp; milestones</p><h2 id="news-title">动态与荣誉</h2></div><p class="section-description">学习与研究路上的一些记录。</p></div>
+      <ul class="news-list">
+        <li><time>2026</time><span class="news-category">荣誉</span><p>获得博士研究生国家奖学金。</p></li>
+        <li><time>2026</time><span class="news-category">课题</span><p>主持西安交通大学基础研究专项（自由探索学生类）课题，开展跨场景无线感知关键技术研究。</p></li>
+        <li><time>2026</time><span class="news-category">专利</span><p>参与的发明专利“一种毫米波与图像融合的人体 3D 网格模型构建方法及系统”获授权，第三发明人。<small>ZL 202310210533.1</small></p></li>
+        <li><time>2025</time><span class="news-category">竞赛</span><p>全国大学生物联网设计竞赛：全国总决赛三等奖、西北赛区一等奖。</p></li>
+        <li><time>2024</time><span class="news-category">竞赛</span><p>全国大学生物联网设计竞赛西北赛区一等奖；泛在智能感知技术创新应用大赛优胜奖。</p></li>
+      </ul>
+      <p class="honors-note">此前还获得校级一等奖学金、优秀研究生干部等荣誉；本科期间获得校级二等奖学金。</p>
+    </section>
 
-          <a class="project-row reveal" href="https://github.com/friendlyCamel/RealTimeCapture-mmw" target="_blank" rel="noreferrer">
-            <span class="project-row-index">04</span>
-            <div>
-              <h3>Real-time mmWave Capture</h3>
-              <p>通过网络层 UDP 数据包监控，实时捕获毫米波雷达原始数据的轻量工具。</p>
-            </div>
-            <ul class="tag-list"><li>Python</li><li>UDP</li><li>Data Pipeline</li></ul>
-            <span class="row-arrow" aria-hidden="true">↗</span>
-          </a>
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="section-bar"><div><p class="section-index">04 / About</p><h2 id="about-title">关于我</h2></div><span class="section-description">Home in Xi’an. Curious about elsewhere.</span></div>
+      <div class="about-layout">
+        <div class="about-prose">
+          <p class="about-lead">我在西安求学，也在这里开始认识研究。</p>
+          <p>从计算机本科到硕博连读，我逐渐把兴趣放在一个具体的问题上：感知方法换一个环境、面对不同的人，能否仍然可靠？毫米波是目前探索这个问题的起点，多模态感知、具身智能与模型部署则把它引向更广的方向。</p>
+          <p>我喜欢研究中的协作，也享受把想法做成工具的过程。希望将来能组织一场聚焦无线感知落地的交流活动，让算法、设备与应用现场的人有机会坐在一起。</p>
+          <p>研究之外，阅读和艺术是长久的兴趣。马尔克斯、《悉达多》和《三国演义》，梵高与莫奈，给日常留下了不同的观察角度。也喜欢篮球，偶尔会想，如果能把感知技术用于运动辅助，或做进一款游戏，会是什么样子。</p>
+          <p>本科时在品阁咖啡厅工作过两年，后来参与 E 维团队的电脑义诊。和不同的人交流、一起解决一个小问题，是这些经历里一直喜欢的部分。学术话题、跨学科的想法，或电脑上的小麻烦，都欢迎来信。</p>
+          <a class="inline-email" href="mailto:740464911@qq.com">740464911@qq.com <span>↗</span></a>
         </div>
-      </section>
+        <aside class="education" aria-label="教育经历与研究兴趣">
+          <h3>Education</h3>
+          <div><time>2022 — 至今</time><h4>西安交通大学</h4><p>计算机科学与技术 · 硕博连读<br />2024 年进入博士阶段<br />导师：丁菡教授</p></div>
+          <div><time>2018 — 2022</time><h4>西安交通大学</h4><p>计算机专业 · 本科</p></div>
+          <div><time>2012 — 2018</time><h4>陕西师范大学附属中学</h4><p>中学</p></div>
+          <h3 class="interest-title">Also curious about</h3>
+          <p>深度与光学视觉 · 语音增强与分离 · 具身智能 · 推理架构与部署 · 运动辅助与穿戴设备</p>
+        </aside>
+      </div>
+    </section>
 
-      <section class="section publications" id="publications" aria-labelledby="publications-title">
-        <div class="section-bar reveal">
-          <div>
-            <p class="section-index">03 / Research record</p>
-            <h2 id="publications-title">论文与成果</h2>
-          </div>
-          <p class="publication-note">5 篇 CCF-A 论文<br />2 篇第一作者 · 2 篇共同第一作者</p>
+    <section class="section travels" id="travel" aria-labelledby="travel-title">
+      <div class="section-bar"><div><p class="section-index">05 / Places</p><h2 id="travel-title">足迹</h2></div><p class="section-description">从西安出发，再带着见闻回来。</p></div>
+      <div class="travel-layout">
+        <figure class="china-map">
+          <img src="images/travel-china.svg" alt="中国旅行足迹地图：已到访辽宁、内蒙古、北京、天津、山西、山东、河南、江苏、浙江、湖北、江西、福建、广东、湖南、贵州、广西、四川、重庆、甘肃，家乡西安位于陕西。" width="900" height="690" loading="lazy" />
+          <figcaption><span class="map-key"><i></i> 到访地区</span><span class="map-key home-key"><i></i> 家乡 · 陕西西安</span><a href="https://datav.aliyun.com/portal/school/atlas/area_selector" target="_blank" rel="noreferrer">地图数据：阿里云 DataV ↗</a></figcaption>
+        </figure>
+        <div class="travel-aside">
+          <p class="travel-home">西安<span>HOME / XI’AN</span></p>
+          <p>熟悉的城市是生活的坐标。旅行让我看看别处的人怎样生活，也为日常添一点新的视角。</p>
+          <details class="visited-list"><summary>国内到访地区</summary><p>辽宁、内蒙古、北京、天津、山西、山东、河南、江苏、浙江、湖北、江西、福建、广东、湖南、贵州、广西、四川、重庆、甘肃。家乡：陕西西安。</p></details>
+          <div class="london-map"><iframe title="英国伦敦的 OpenStreetMap 地图" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.4%2C51.38%2C0.13%2C51.66&amp;layer=mapnik&amp;marker=51.5074%2C-0.1278" loading="lazy" referrerpolicy="no-referrer"></iframe><a href="https://www.openstreetmap.org/?mlat=51.5074&amp;mlon=-0.1278#map=11/51.5074/-0.1278" target="_blank" rel="noreferrer"><span>伦敦 / London</span><span>UNITED KINGDOM ↗</span></a></div>
         </div>
+      </div>
+    </section>
 
-        <div class="record-grid reveal" aria-label="研究成果概览">
-          <div><strong>05</strong><span>CCF-A papers</span></div>
-          <div><strong>04</strong><span>First / co-first</span></div>
-          <div><strong>01 + 05</strong><span>Granted + accepted patents</span></div>
-          <div><strong>03</strong><span>ACM TURC · 2024—26</span></div>
-        </div>
-
-        <div class="publication-list">
-          <a class="publication-row reveal" href="https://doi.org/10.1109/INFOCOM55648.2025.11044473" target="_blank" rel="noreferrer">
-            <span>01</span>
-            <h3>One Snapshot is All You Need: A Generalized Method for mmWave Signal Generation</h3>
-            <p>IEEE INFOCOM 2025<br /><b>First author</b></p>
-            <i aria-hidden="true">↗</i>
-          </a>
-          <a class="publication-row reveal" href="https://doi.org/10.1145/3831953" target="_blank" rel="noreferrer">
-            <span>02</span>
-            <h3>Beyond Radial Limits: Recovering Direction-Invariant Walking Dynamics for Robust mmWave Radar Person Re-Identification</h3>
-            <p>ACM IMWUT 2026<br /><b>First author</b></p>
-            <i aria-hidden="true">↗</i>
-          </a>
-          <a class="publication-row reveal" href="https://doi.org/10.1145/3770708" target="_blank" rel="noreferrer">
-            <span>03</span>
-            <h3>We Can Hear You with mmWave Radar! An End-to-End Eavesdropping System</h3>
-            <p>ACM IMWUT 2025<br /><b>Co-first author</b></p>
-            <i aria-hidden="true">↗</i>
-          </a>
-          <div class="publication-row reveal">
-            <span>04</span>
-            <h3>mmWave-Aided Unified Speech Enhancement and Separation without Speaker Count Prior</h3>
-            <p>IEEE INFOCOM 2026<br /><b>Co-first author</b></p>
-            <i aria-hidden="true">—</i>
-          </div>
-          <a class="publication-row reveal" href="https://doi.org/10.1109/TMC.2026.3673171" target="_blank" rel="noreferrer">
-            <span>05</span>
-            <h3>Active Domain Adaptation for mmWave-based HAR via Rényi Entropy-based Uncertainty Estimation</h3>
-            <p>IEEE TMC 2026<br /><b>Second author</b></p>
-            <i aria-hidden="true">↗</i>
-          </a>
-        </div>
-      </section>
-
-      <section class="section about" id="about" aria-labelledby="about-title">
-        <div class="about-aside reveal">
-          <p class="section-index">04 / About</p>
-          <div class="monogram" aria-hidden="true">
-            <span>T</span><span>H</span>
-            <i></i>
-          </div>
-        </div>
-        <div class="about-copy reveal">
-          <h2 id="about-title">研究，应该既有想象力，<br />也能经得起现实。</h2>
-          <div class="about-columns">
-            <p>
-              我在西安交通大学跟随丁菡教授攻读博士学位，研究毫米波无线感知及泛化。
-              正在探索增强泛化能力的方法，希望模型面对跨视角、跨场景和有限数据时依然可靠。
-            </p>
-            <p>
-              我喜欢把研究一路推进到真实场景：从数据采集、信号建模和算法验证，到医院部署与临床反馈。
-              主持校级资助的跨场景无线感知课题。未来，我希望办一场属于无线感知的大会，
-              让研究者与实践者相遇，认真讨论技术怎样真正落地。
-            </p>
-          </div>
-          <div class="education-timeline" aria-label="教育经历">
-            <div><time>2022 — 至今</time><p><b>硕博连读 · 博士在读</b><br />西安交通大学 · 2024 年进入博士阶段</p></div>
-            <div><time>2018 — 2022</time><p><b>本科</b><br />西安交通大学 · 计算机科学与技术学院</p></div>
-            <div><time>2012 — 2018</time><p><b>中学</b><br />陕西师范大学附属中学</p></div>
-          </div>
-          <div class="personal-note">
-            <h3>一步一步，也是自己的成长。</h3>
-            <p>本科获得校级二等奖学金，硕士阶段获得一等奖学金与优秀研究生干部荣誉，博士阶段获得国家奖学金。对我来说，这是一段逐渐靠近目标、终于圆了一个心愿的过程。</p>
-          </div>
-          <details class="interest-details"><summary>研究兴趣，还在向外延伸</summary>
-            <p>除毫米波感知外，我也关注深度相机与光学相机等智能感知、语音增强与分离、具身智能，以及模型推理架构与部署。未来想尝试游戏制作、运动辅助模型和穿戴式设备。</p>
-          </details>
-          <div class="about-links">
-            <a href="https://github.com/friendlyCamel" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
-            <a href="mailto:740464911@qq.com">Email <span>↗</span></a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section life" id="life" aria-labelledby="life-title">
-        <div class="section-bar">
-          <div><p class="section-index">05 / Beyond research</p><h2 id="life-title">信号之外，<br />也有很大的世界。</h2></div>
-          <p class="publication-note">阅读 · 艺术 · 旅行 · 日常</p>
-        </div>
-        <div class="life-grid">
-          <article><span class="section-index">01 / Books</span><h3>文学的影响，总是滞后的。</h3>
-            <p>高三时读过很多书，至今仍喜欢马尔克斯的《百年孤独》《霍乱时期的爱情》，也喜欢《梵高传》和《悉达多》。从小就是《三国演义》的忠实读者。</p>
-            <p>如今再回想《琵琶行》《赤壁赋》《岳阳楼记》《滕王阁序》，常会有新的感叹。有些文字，会在人生的不同阶段重新抵达。</p>
-          </article>
-          <article><span class="section-index">02 / Art &amp; Sound</span><h3>画里的颜色，耳机里的世界。</h3>
-            <p>喜欢梵高的《向日葵》《星空》，也喜欢莫奈的《日出·印象》。音乐口味很杂，从流行音乐到古风、DJ 改编，都愿意听听。</p>
-            <p>我喜欢理工农医文等不同学科的话题，也略懂一点铝合金研究和篮球技战术。欢迎带着你的兴趣来聊聊。</p>
-          </article>
-          <article><span class="section-index">03 / Everyday life</span><h3>咖啡厅与电脑义诊。</h3>
-            <p>本科时在品阁咖啡厅工作了两年，那是很有意思的一段生活。也曾参与 E 维团队，为大家提供电脑义诊志愿服务。</p>
-            <p>如果你的电脑遇到问题，也欢迎联系我。研究合作之外，生活里的小问题同样值得一起解决。</p>
-          </article>
-        </div>
-        <div class="travel-block">
-          <div><p class="section-index">Travel notebook</p><h3>走过很多地方，<br />最爱仍是西安。</h3>
-            <p>国内走过十九个省级地区，家乡在陕西西安。海外去过英国伦敦。下面是我的足迹方格图，按大致方位排列，不表示行政边界或实际距离。</p>
-            <p class="home-label">● 陕西 · 西安 / HOME</p><p>海外足迹：英国 · 伦敦</p>
-          </div>
-          <div class="footprint-map" role="group" aria-label="中国旅行足迹方格示意图">
-            <span style="--c:4;--r:1">内蒙古</span><span style="--c:6;--r:1">辽宁</span>
-            <span style="--c:4;--r:2">北京</span><span style="--c:5;--r:2">天津</span>
-            <span style="--c:1;--r:3">甘肃</span><span style="--c:3;--r:3">山西</span><span style="--c:5;--r:3">山东</span>
-            <span class="home-tile" style="--c:2;--r:4">陕西<small>西安 · 家乡</small></span><span style="--c:4;--r:4">河南</span><span style="--c:6;--r:4">江苏</span>
-            <span style="--c:1;--r:5">四川</span><span style="--c:2;--r:5">重庆</span><span style="--c:4;--r:5">湖北</span><span style="--c:6;--r:5">浙江</span>
-            <span style="--c:2;--r:6">贵州</span><span style="--c:3;--r:6">湖南</span><span style="--c:4;--r:6">江西</span><span style="--c:5;--r:6">福建</span>
-            <span style="--c:3;--r:7">广西</span><span style="--c:4;--r:7">广东</span>
-          </div>
-        </div>
-        <div class="personal-note future-note"><p class="section-index">Someday</p><h3>还有一些，想亲手做出来的事。</h3><p>办一场真正关注落地的无线感知大会，制作一款游戏，探索帮助人们运动的模型和穿戴式设备。眼下继续读博、认真做好毫米波感知研究，也为这些想法留一点生长的空间。</p></div>
-      </section>
-
-      <section class="contact" aria-labelledby="contact-title">
-        <div class="contact-orbit" aria-hidden="true"><i></i><i></i><i></i></div>
-        <p class="eyebrow">Have a question, idea, or collaboration?</p>
-        <h2 id="contact-title">一起做点有信号的事。</h2>
-        <a href="mailto:740464911@qq.com">740464911@qq.com <span aria-hidden="true">↗</span></a>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <p>© <span data-year></span> Teng Huang</p>
-      <p>Paving the way for wireless sensing to become a practical reality.</p>
-      <a href="#top">回到顶部 ↑</a>
-    </footer>
-  </body>
+    <section class="contact" id="contact" aria-labelledby="contact-title"><p class="eyebrow">LET’S TALK</p><h2 id="contact-title">欢迎交流。</h2><p>无线感知、研究合作，或一个有意思的话题。</p><a href="mailto:740464911@qq.com">740464911@qq.com <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer class="site-footer"><p>© <span data-year>2026</span> 黄腾 / Teng Huang</p><a href="https://github.com/friendlyCamel" target="_blank" rel="noreferrer">GitHub ↗</a><a href="#top">回到顶部 ↑</a></footer>
+</body>
 </html>

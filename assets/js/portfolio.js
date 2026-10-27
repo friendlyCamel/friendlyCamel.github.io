@@ -1,7 +1,8 @@
 (() => {
   const root = document.documentElement;
   const themeToggle = document.querySelector("[data-theme-toggle]");
-  const savedTheme = localStorage.getItem("portfolio-theme");
+  let savedTheme;
+  try { savedTheme = localStorage.getItem("portfolio-theme"); } catch (_) {}
 
   if (savedTheme === "dark" || savedTheme === "light") {
     root.dataset.theme = savedTheme;
@@ -10,8 +11,10 @@
   themeToggle?.addEventListener("click", () => {
     const next = root.dataset.theme === "dark" ? "light" : "dark";
     root.dataset.theme = next;
-    localStorage.setItem("portfolio-theme", next);
+    themeToggle.setAttribute("aria-pressed", String(next === "dark"));
+    try { localStorage.setItem("portfolio-theme", next); } catch (_) {}
   });
+  themeToggle?.setAttribute("aria-pressed", String(savedTheme === "dark"));
 
   document.querySelector("[data-year]").textContent = new Date().getFullYear();
 
@@ -36,20 +39,11 @@
     reveals.forEach((element) => element.classList.add("is-visible"));
   }
 
-  const repoStat = document.querySelector("[data-repo]");
-  if (repoStat) {
-    fetch(`https://api.github.com/repos/friendlyCamel/${repoStat.dataset.repo}`)
-      .then((response) => (response.ok ? response.json() : Promise.reject()))
-      .then((repo) => {
-        repoStat.innerHTML = `${repo.language || "Code"} · <b>★ ${repo.stargazers_count}</b>`;
-      })
-      .catch(() => {});
-  }
-
   const canvas = document.querySelector("#signal-canvas");
   if (!canvas) return;
 
   const context = canvas.getContext("2d");
+  if (!context) return;
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let width = 0;
   let height = 0;
@@ -126,5 +120,5 @@
 
   resize();
   draw();
-  window.addEventListener("resize", resize, { passive: true });
+  window.addEventListener("resize", () => { resize(); if (reducedMotion) draw(); }, { passive: true });
 })();
